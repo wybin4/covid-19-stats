@@ -1,5 +1,5 @@
 const padding = 1.1;
-
+const divisor_value = 370;
 $.getJSON(
   "https://raw.githubusercontent.com/ajdivotf/covid-19-stats/main/files/data.json",
   function (data) {
@@ -16,16 +16,16 @@ $.getJSON(
       .select("body")
       .append("svg")
       .attr("width", width + 10)
-      .attr("height", height / 370 + 20);
+      .attr("height", height / divisor_value + 20);
     svg
       .selectAll("rect")
       .data(countes)
       .enter()
       .append("rect")
       .attr("x", (d, i) => i * padding)
-      .attr("y", (d, i) => (height - d) / 370)
+      .attr("y", (d, i) => (height - d) / divisor_value)
       .attr("width", 1)
-      .attr("height", (d, i) => d / 370)
+      .attr("height", (d, i) => d / divisor_value)
       .attr("fill", "#4E8098")
       .attr("class", "bar")
       .attr("transform", "translate(10, 9)")
@@ -43,7 +43,7 @@ $.getJSON(
     let scale = d3
       .scaleLinear()
       .domain([height, 0])
-      .range([0, height / 370]);
+      .range([0, height / divisor_value]);
     let axis = d3.axisLeft(scale);
     svg.append("g").attr("transform", "translate(50, 9)").call(axis);
     svg
