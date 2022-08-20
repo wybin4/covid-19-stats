@@ -1,0 +1,30 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #a31621;
+  background-color: #fcf7f8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#title {
+  font-size: 25px;
+  text-align: center;
+}
+.bar:hover {
+  fill: #a31621;
+}
+div.tooltip {
+  color: #fcf7f8;
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  background: #a31621;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
