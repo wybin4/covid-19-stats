@@ -34,8 +34,9 @@ $.getJSON(
         div.transition().duration(200).style("opacity", 0.9);
         div
           .html(dates[countes.indexOf(i)] + "<br/>" + Math.round(i))
-          .style("left", d.x - 290 + "px")
-          .style("top", d.y - 80 + "px");
+          .style("left", d.offsetX - 30 + "px")
+          .style("top", d.offsetY - 20 + "px");
+      console.log(d);
       })
       .on("mouseout", function () {
         div.transition().duration(500).style("opacity", 0);
