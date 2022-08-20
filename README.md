@@ -1,5 +1,5 @@
 # covid-19-stats
-visualize sata with a scatterplot graph
+visualize data with a scatterplot graph
 
 this is the implementation of the task from the freecodecamp course - data visualization projects.
 
