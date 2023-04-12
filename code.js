@@ -1,7 +1,7 @@
 const padding = 1.1;
 const divisor_value = 370;
 $.getJSON(
-  "https://raw.githubusercontent.com/ajdivotf/covid-19-stats/main/files/data.json",
+  "https://raw.githubusercontent.com/wybin4/covid-19-stats/main/files/data.json",
   function (data) {
     const dates = data.map((d) => d.date);
     const countes = data.map((d) => d.count);
